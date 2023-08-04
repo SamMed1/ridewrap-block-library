@@ -1,0 +1,597 @@
+/* ==========================================================================
+Shared CSS
+========================================================================== */
+
+@import 'settings';
+
+/**
+ * The following styles are shared between all blocks, to repeat rewriting styles per block.
+ */
+
+/* Splide.js base styles */
+.splide__arrow {
+    -ms-flex-align: center;
+    align-items: center;
+    background: none;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2em;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: .7;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2em;
+    z-index: 1;
+}
+
+.splide__arrow svg {
+    fill: #eae9e9
+}
+
+.splide__arrow:hover:not(:disabled) {
+    opacity: .9
+}
+
+.splide__arrow:disabled {
+    opacity: 0
+}
+
+.splide__arrow :focus-visible {
+    outline: 3px solid #0bf;
+    outline-offset: 3px;
+}
+
+.splide__arrow.splide__arrow--prev {
+    left: -45px;
+}
+
+.splide__arrow.splide__arrow--prev svg {
+    transform: scaleX(-1)
+}
+
+.splide__arrow--next {
+    right: -45px;
+}
+
+.splide.is-focus-in .splide__arrow:focus {
+    outline: 3px solid #0bf;
+    outline-offset: 3px;
+}
+
+/* Splide Pagination */
+.splide__pagination__page {
+    background: #ccc;
+    border: 0;
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    margin: 3px;
+    opacity: .7;
+    padding: 0;
+    position: relative;
+    transition: transform .2s linear;
+    width: 8px;
+    transform: none;
+}
+
+.splide__pagination__page.is-active {
+    background: #fff;
+    z-index: 1;
+}
+
+.splide__pagination__page:hover {
+    cursor: pointer;
+    opacity: .9;
+}
+
+.splide__pagination__page :focus-visible {
+    outline: 3px solid #0bf;
+    outline-offset: 3px;
+}
+
+.splide.is-focus-in .splide__pagination__page:focus {
+    outline: 3px solid #0bf;
+    outline-offset: 3px;
+}
+
+/* Splide Imagery */
+.splide__slide img {
+    width: 100%;
+}
+
+/* Animations */
+@keyframes arrow-bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: rotate(180deg) translateX(0);
+    }
+
+    40% {
+        transform: rotate(180deg) translateX(-3px);
+    }
+
+    60% {
+        transform: rotate(180deg) translateX(-5px);
+    }
+}
+
+@keyframes button-bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(-3px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
+}
+
+// Progress Circles.
+.progress-circle-wrap {
+    box-shadow: 0px 0.25px 0px 4.5px $color-black;
+    margin: 0 0 0 rem(-20px);
+    margin: auto;
+    width: rem(150px);
+    height: rem(150px);
+    background: $color-blue-dark;
+    border-radius: 50%;
+    transform: scale(0.475);
+
+    @media (min-width: 1700px) {
+        transform: scale(0.6);
+    }
+
+    &.progress-circle-wrap-slider {
+        min-width: rem(150px);
+        transform: scale(0.65);
+
+        @media (min-width: $screen-xl) {
+            margin: -50px 0 0 -30px;
+            transform: scale(0.65);
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 4px;
+        height: 22px;
+        background: $color-black;
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 71px;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+    }
+
+    &.progress-circle-left {
+        margin-left: rem(-30px);
+    }
+
+    .progress-circle .mask,
+    .progress-circle .fill {
+        width: rem(150px);
+        height: rem(150px);
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    .progress-circle .mask {
+        clip: rect(0px, 150px, 150px, 75px);
+    }
+
+    // TEMP OVERRIDE
+    .progress-circle-inside {
+        font-size: 18px!important;
+    }
+    .progress-circle-inside::before {
+        margin-bottom: 4px;
+        margin-top: -17px!important;
+    }
+    .progress-circle-inside::after {
+        content: 'Coverage'!important;
+        text-transform: uppercase;
+        display: block;
+        margin-top: -10px;
+    }
+
+    .progress-circle-inside {
+        width: rem(106px);
+        height: rem(106px);
+        border-radius: 50%;
+        background: $color-blue-medium;
+        line-height: rem(100px);
+        text-align: center;
+        margin-top: rem(22px);
+        margin-left: rem(23px);
+        color: $color-black;
+        position: absolute;
+        z-index: 100;
+        font-weight: 700;
+        font-size: 2em;
+        border: 5px solid $color-grey-dark;
+
+        &::before {
+            content: '0%';
+            display: block;
+            font-size: 26px;
+            position: relative;
+            height: rem(30px);
+            width: 100%;
+        }
+    }
+
+    .mask .fill {
+        clip: rect(0px, 75px, 150px, 0px);
+        background-color: $color-orange-medium;
+    }
+
+    .mask.full .fill {
+        &::before {
+            content: "";
+            width: 4px;
+            height: 22px;
+            background: $color-black;
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 71px;
+        }
+    }
+}
+
+// Run progress circle animation.
+.wp-block-ridewrap-block-panel-slider.in_view {
+
+    // Kit: Tailored Protection.
+    .percentage-95 {
+        .progress-circle-inside {
+            &::before {
+                content: '95%';
+                display: block;
+                position: relative;
+                height: rem(30px);
+                width: 100%;
+            }
+        }
+
+        .mask.full,
+        .progress-circle .fill {
+            animation: fill90 ease-in-out 0.5s;
+            transform: rotate(172deg);
+        }
+    }
+
+    // Kit: Covered Protection.
+    .percentage-60 {
+        .progress-circle-inside {
+            &::before {
+                content: '60%';
+                display: block;
+                position: relative;
+                height: rem(30px);
+                width: 100%;
+            }
+        }
+
+        .mask.full,
+        .progress-circle .fill {
+            animation: fill60 ease-in-out 0.5s;
+            transform: rotate(107deg);
+        }
+    }
+
+    // Kit: Essential Protection.
+    .percentage-30 {
+        .progress-circle-inside {
+            &::before {
+                content: '30%';
+                display: block;
+                position: relative;
+                height: rem(30px);
+                width: 100%;
+            }
+        }
+
+        .mask.full,
+        .progress-circle .fill {
+            animation: fill30 ease-in-out 0.5s;
+            transform: rotate(55deg);
+        }
+    }
+}
+
+@keyframes fill90 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(160deg);
+    }
+}
+
+@keyframes fill60 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(105deg);
+    }
+}
+
+@keyframes fill30 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(55deg);
+    }
+}
+
+// Gutenberg editor controls.
+.custom-control-wrapper {
+    height: max-content;
+}
+
+.wp-block-image .components-resizable-box__container {
+    width: fit-content!important;
+    height: fit-content!important;
+}
+
+// Super Checker Shortcode styling.
+.block-super-checker,
+.page-template-gutenberg-template,
+.single-product {
+    .rw-super-checker {
+        background-color: $color-grey-medium;
+
+        .rw-super-checker-dropdown div.rw-super-checker-dropdown-input-section {
+            transform: unset;
+
+            button {
+                background: $color-blue-medium;
+                opacity: 1;
+            }
+        }
+
+        .rw-super-checker-open-modal {
+            font-size: 16px;
+        }
+
+        .rw-super-checker-dropdown div.rw-super-checker-dropdown-input-section button:disabled {
+            background: $color-black;
+        }
+
+        .rw-super-checker-dropdown-items button {
+            text-transform: capitalize;
+            font-style: inherit;
+        }
+
+        .rw-super-checker-nav-list-item-button {
+            width: auto;
+        }
+
+        .btn::after {
+            display: none;
+        }
+
+        input.rw-super-checker-dropdown-input[type="text"],
+        input.rw-super-checker-dropdown-input[type="text"]:disabled {
+            background-color: $color-black;
+            color: $color-white;
+
+            &::placeholder {
+                color: $color-white;
+                opacity: 1;
+            }
+        }
+
+        .rw-custom-attributes-select span {
+            transform: none;
+        }
+
+        button.rw-super-checker-add-to-cart-button {
+            transform: none;
+        }
+
+        .rw-super-checker-product-main-footer-inner div.quantity:after {
+            transform: none;
+        }
+
+        .rw-super-checker-result-tab-panel {
+            h2 {
+                font-size: 30px;
+                margin-bottom: $gutter-width-single;
+            }
+        }
+
+        .rw-super-checker-dropdown-input-section-open:after {
+            background-color: #3f3f3f;
+        }
+
+        .rw-super-checker-dropdown-body {
+            margin-left: rem(10px);
+        }
+    }
+}
+
+// WooCommerce shortcode options front end styling.
+.wp-block-ridewrap-block-panel-dynamic p.add_to_cart_inline,
+.wp-block-ridewrap-block-panel p.add_to_cart_inline,
+.wp-block-ridewrap-block-panel-horizontal p.add_to_cart_inline {
+    height: auto!important;
+    padding: 0!important;
+    border: none!important;
+    display: block!important;
+
+    a {
+        display: none!important;
+    }
+}
+
+.show-cart-btn {
+	.add_to_cart_inline {
+		display: block!important;
+
+		.add_to_cart_button {
+			display: block !important;
+			background-color: $color-black;
+			color: $color-white;
+			height: rem(56px);
+			margin-bottom: 0;
+			padding: $gutter-width-single $gutter-width-double;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			-webkit-backface-visibility: hidden;
+			box-shadow: -0.25px 0px 0px 0px $color-black;
+			z-index: 1;
+			text-transform: uppercase;
+			text-align: center;
+			line-height: 1em;
+			font-size: 25px;
+
+			@media (min-width: $screen-md) {
+				font-size: 25px;
+			}
+			@media (min-width: $screen-lg) {
+				font-size: 32px;
+				text-align: left;
+			}
+
+			@media (min-width: $screen-lg) {
+				height: rem(62px);
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				right: $gutter-width-single;
+				background-image: url('../../panel/src/assets/icon-caret-left.svg');
+				background-repeat: no-repeat;
+				background-repeat: no-repeat;
+				display: inline-block;
+				height: rem(20px);
+				width: rem(20px);
+				transform: rotate(180deg);
+				top: rem(20px);
+			}
+
+			&:hover {
+				background-color: $color-black;
+			}
+		}
+	}
+}
+
+.show-price {
+	.add_to_cart_inline {
+		a:first-child {
+			background-color: $color-white;
+			display: inline !important;
+			position: absolute;
+			bottom: rem(80px);
+			right: $gutter-width-double;
+			display: inline;
+			height: auto;
+			padding: rem(4px) rem(10px);
+			border: 3px solid $color-black;
+			font-size: 24px;
+			color: $color-black;
+			font-weight: 600;
+
+			del {
+				display: none;
+			}
+		}
+	}
+}
+
+/**
+ * The following styles are custom styles to be applied on a page by page basis, where css is specific to 
+ * a use-case, and is outside of the typical block styling.
+ */
+
+/* Gradient left border on second block where 2 blocks are used on same page. */
+.wp-block-ridewrap-block-feature-slider~.wp-block-ridewrap-block-feature-slider::before {
+    background-image: linear-gradient(#ff4f31, #c83e32);
+}
+
+/**
+ * ACF Blocks - Editor Styling.
+ * The RideWrap library of blocks is made up of mainly custom React blocks, which are stored in this plugin.
+ * There are exceptions to this pattern, which are ACF Dynamic Blocks - https://www.advancedcustomfields.com/resources/blocks/.
+ * These ACF blocks are stored in the theme, however the styling of these blocks in the page editor is stored below for performance reasons.
+ */
+
+/* FAQ Block */
+div[data-type='acf/faq-selector'] {
+    background: rgba(277,277,277,0.2);
+    margin: 0 0 rem(10px) 0;
+    min-height: rem(100px);
+    padding: 0 rem(10px);
+
+    h4 {
+        margin: 0;
+    }
+
+    button {
+        background: none;
+        border: none;
+        border-bottom: 2px solid $color-black;
+        padding: rem(10px) 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    p {
+        margin: 0 0 rem(10px) 0;
+    }
+
+    a {
+        background: none;
+        padding: 0;
+        margin: 0;
+        display: inline;
+        color: $color-white;
+    }
+
+    .rw-acf-faq-panel-body {
+        font-size: 14px;
+        padding: rem(10px) 0;
+    }
+
+    .acf-block-component .acf-block-fields {
+        background: none;
+        border: none;
+    }
+
+    .acf-field {
+        padding: rem(10px) 0!important;
+    }
+}

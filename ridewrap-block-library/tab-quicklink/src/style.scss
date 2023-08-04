@@ -1,0 +1,93 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ @import '/../assets/css/settings';
+
+.wp-block-ridewrap-block-tab-quicklink:not([data-type='ridewrap-block/tab-quicklink']) {
+	font-weight: 600;
+    font-family: $font-body;
+	font-size: 25px;
+    letter-spacing: 0.1px;
+    line-height: 1em;
+    font-style: italic;
+    margin: 0;
+    text-transform: uppercase;
+	background-color: #0b0a0a;
+    color: $color-white;
+	padding: $gutter-width-single rem(45px) $gutter-width-single $gutter-width-double;
+    position: relative;
+    width: 100%;
+    line-height: rem(30px);
+    box-shadow: -0.25px 0 $color-black;
+	text-decoration: none;
+	transition: 0.2s ease-in-out;
+
+	@media (min-width: $screen-lg) {
+		width: 32%;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: $gutter-width-single;
+		background-image: url('assets/icon-caret-left.svg');
+		background-repeat: no-repeat;
+		display: inline-block;
+		height: rem(20px);
+		width: rem(20px);
+		transform: rotate(180deg);
+		top: 35%;
+	}
+
+	&:hover {
+		@media (min-width: $screen-xl) {
+			transform: scale(1.02);
+		}
+
+		&::after {
+			@media (min-width: $screen-xl) {
+				-webkit-animation: arrow-bounce 1s 1;
+				animation: arrow-bounce 1s 1;
+			}
+		}
+	}
+}
+
+// Editor styles.
+.editor-styles-wrapper {
+	div[data-type='ridewrap-block/tab-quicklink'] {
+		background-color: $color-blue-medium;
+		flex: 1 0 30%;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 0;
+		margin-top: rem(10px);
+		max-width: 32%;
+
+		a {
+			display: block;
+			font-weight: 500;
+			background: $color-black;
+			color: $color-blue-dark;
+			font-size: 14px;
+			padding: rem(6px);
+			border-top: 1px solid $color-blue-dark;
+		}
+
+		h2 { 
+			color: $color-white;
+			font-style: italic;
+		}
+
+		.h4-style {
+			background-color: $color-black;
+			color: $color-white;
+			margin: 0;
+			padding: $gutter-width-single rem(10px);
+		}
+	}
+}

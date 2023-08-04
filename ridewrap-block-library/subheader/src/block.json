@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ridewrap-block/subheader",
+	"version": "0.1.0",
+	"title": "Subheader",
+	"category": "ridewrap-blocks",
+	"icon": "smiley",
+	"description": "RideWrap Subheader Block",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "subheader",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

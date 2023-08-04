@@ -1,0 +1,65 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-ridewrap-block-subheader:not([data-type="ridewrap-block/subheader"]) {
+  background-color: #ff4f31;
+  color: #000000;
+  padding: 1.875rem 0.9375rem;
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-subheader:not([data-type="ridewrap-block/subheader"]) {
+    padding: 1.875rem 3.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-subheader:not([data-type="ridewrap-block/subheader"]) .col:first-of-type {
+    width: 33%;
+  }
+}
+.wp-block-ridewrap-block-subheader:not([data-type="ridewrap-block/subheader"]) .col:last-of-type {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-subheader:not([data-type="ridewrap-block/subheader"]) .col:last-of-type {
+    width: 66%;
+  }
+}
+.wp-block-ridewrap-block-subheader:not([data-type="ridewrap-block/subheader"]) .h3-style {
+  margin-bottom: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-subheader:not([data-type="ridewrap-block/subheader"]) .h3-style {
+    margin-bottom: 0;
+  }
+}
+.wp-block-ridewrap-block-subheader:not([data-type="ridewrap-block/subheader"]) p {
+  color: #000000;
+  line-height: 1.25rem;
+  margin-bottom: 0;
+}
+
+div[data-type="ridewrap-block/subheader"] {
+  background-color: #ff4f31;
+  padding: 0.9375rem;
+}
+div[data-type="ridewrap-block/subheader"] h3 {
+  color: #000000;
+  font-style: italic;
+  margin: 0.3125rem 0 0.625rem 0;
+  text-transform: uppercase;
+}
+div[data-type="ridewrap-block/subheader"] p {
+  color: #000000;
+  font-size: 0.875rem;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

@@ -1,0 +1,111 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ @import '/../assets/css/settings';
+
+.wp-block-ridewrap-block-panel-slider-small:not([data-type='ridewrap-block/panel-slider-small']) {
+	background-color: $color-black;
+	color: $color-white;
+	padding: 0 0 rem(90px) 0;
+	position: relative;
+	z-index: 1;
+
+	@media (min-width: $screen-xl) {
+		padding: rem(60px);
+	}
+
+	&::after {
+		content: '';
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: $color-grey-medium;
+		z-index: -1;
+
+		@media (min-width: $screen-xl) {
+			width: 66%;
+		}
+	}
+
+	.col:first-of-type {
+		width: 100%;
+
+		@media (min-width: $screen-xl) {
+			width: 25%;
+		}
+	}
+
+	.col:last-of-type {
+		width: 100%;
+		margin: auto;
+
+		@media (min-width: $screen-xl) {
+			width: 75%;
+		}
+	}
+
+	.h2-style {
+		color: $color-white;
+		text-align: center;
+		padding: calc($gutter-width-double * 2) 0 $gutter-width-double 0;
+		background: $color-black;
+		margin-left: -$gutter-width-double;
+		margin-right: -$gutter-width-double;
+		margin-bottom: $gutter-width-double;
+
+		@media (min-width: $screen-xl) {
+			text-align: unset;
+			padding: unset;
+			background: unset;
+			margin-left: unset;
+			margin-right: unset;
+			margin-bottom: unset;
+		}
+	}
+
+	// Splide wrapper.
+	.splide {
+		margin: auto;
+	}
+
+	// Splide pagination.
+	.splide__pagination {
+		left: 0;
+		padding: 0 1em;
+		position: absolute;
+		right: 0;
+		z-index: 1;
+		margin-top: $gutter-width-single;
+
+		li {
+			display: inline-block;
+			line-height: 1;
+			list-style-type: none;
+			margin: 0;
+			pointer-events: auto;
+		}
+	}
+}
+
+// Editor styles.
+div[data-type='ridewrap-block/panel-slider-small'] {
+	background-color: #2b2828;
+	padding: $gutter-width-single;
+
+	h3 { 
+		color: $color-white;
+		font-style: italic;
+		margin: rem(5px) 0 rem(10px) 0;
+	}
+
+	& > .container > .block-editor-inner-blocks > .block-editor-block-list__layout {
+		display: flex;
+		gap: $gutter-width-single;
+		flex-wrap: wrap;
+	} 
+}

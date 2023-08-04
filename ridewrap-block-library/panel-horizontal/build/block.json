@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ridewrap-block/panel-horizontal",
+	"version": "0.1.0",
+	"title": "Panel Horizontal",
+	"category": "ridewrap-blocks",
+	"icon": "smiley",
+	"description": "RideWrap Panel Horizontal Block.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "panel-horizontal",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

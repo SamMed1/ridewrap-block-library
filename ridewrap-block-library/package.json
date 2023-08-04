@@ -1,0 +1,13 @@
+{
+    "name": "ridewrap-block-library",
+    "version": "1.0.0",
+    "description": "ridewrap gutenberg block library scripts",
+    "main": "ridewrap-block-library-plugin.php",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "watch": "sass --watch assets/css/_shared.scss assets/css/shared-css-compiled.css"
+    },
+    "author": "ridewrap.ca",
+    "license": "ISC"
+  }
+  

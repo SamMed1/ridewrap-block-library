@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ridewrap-block/panel-wrapper-small",
+	"version": "0.1.0",
+	"title": "Panel Wrapper Small",
+	"category": "ridewrap-blocks",
+	"icon": "smiley",
+	"description": "RideWrap Panel Wrapper Small Block.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "panel-wrapper-small",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,106 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-ridewrap-block-localization-wrapper:not([data-type="ridewrap-block/localization-wrapper"]) {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] {
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5625rem 0.9375rem;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] .col {
+  padding: 0 0.9375rem;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] .col.ui-minify {
+  display: none;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] .header-row {
+  display: flex;
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 0.9375rem;
+  justify-content: space-between;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] .header-row .h3-style .components-base-control {
+  margin-top: 10px;
+  font-weight: 400;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] .h5-style {
+  margin-bottom: 10px;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] .locales-state {
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] .inner-list {
+  font-size: 14px;
+  background: #ffffff;
+  padding: 3px 0.9375rem;
+  border-radius: 7px;
+  font-weight: 500;
+  color: #1a89c9;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: fit-content;
+  max-width: 80%;
+  margin: 6px auto;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] .locale-picker {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0 0.9375rem 0px;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] .locale-picker.border-bottom {
+  border-bottom: 1px solid #cfcfcf;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] .locale-picker .components-base-control {
+  font-size: 12px;
+  width: 12%;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] h3 {
+  color: #000000;
+  margin: 0;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] .helper {
+  font-size: 14px;
+  margin: 0;
+  position: relative;
+  width: 35%;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] .helper::before {
+  content: "i";
+  display: block;
+  position: absolute;
+  left: -23px;
+  top: 2px;
+  height: 17px;
+  width: 17px;
+  background-color: #e0e694;
+  border-radius: 50%;
+  font-size: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] img {
+  width: 100%;
+  height: 100%;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] figcaption {
+  display: none;
+}
+.editor-styles-wrapper div[data-type="ridewrap-block/localization-wrapper"] .components-placeholder__label {
+  display: none;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

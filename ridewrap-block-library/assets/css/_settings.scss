@@ -1,0 +1,56 @@
+// PX to REM function.
+$html-font-size: 16px;
+
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@function rem($pxValue) {
+    @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+// Theme Breakpoints.
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-wide: 1800px;
+
+// Theme Colors.
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-grey-dark: #000000;
+$color-grey-medium: #1f1f1f;
+$color-grey-light: #7c7e80;
+
+$color-orange-dark: #f15638;
+$color-orange-medium: #ff4f31;
+$color-orange-light: #bf493a;
+
+$color-maroon: #C83E32;
+
+$color-blue-dark: #29a3ac;
+$color-blue-medium: #5bc6d3;
+
+$color-orange-gradient: linear-gradient(45deg, $color-orange-dark 10%, $color-orange-light 70%);
+$color-blue-gradient: linear-gradient(45deg, $color-blue-medium 10%, $color-blue-dark 70%);
+
+$color-outline-grey: #f2f5f4;
+
+// Grid.
+$container-width-xl: rem(2000px);
+$container-width-wide: rem(1280px);
+$container-width-narrow: rem(960px);
+
+// Spacings.
+$gutter-width-single: rem(15px);
+$gutter-width-double: rem(30px);
+
+// Navigation.
+$nav-height: rem(60px);
+
+// Typography.
+$font-headline: 'Source Sans Pro', Helvetica, sans-serif;
+$font-body: 'Source Sans Pro', Helvetica, sans-serif;
+$font-awesome: 'Font Awesome 5 Pro';

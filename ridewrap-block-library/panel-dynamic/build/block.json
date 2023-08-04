@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ridewrap-block/panel-dynamic",
+  "version": "0.1.0",
+  "title": "Panel Dynamic",
+  "category": "ridewrap-blocks",
+  "icon": "smiley",
+  "description": "Example static block scaffolded with Create Block tool.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "panel-dynamic",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

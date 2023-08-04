@@ -1,0 +1,125 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@import '/../assets/css/settings';
+
+.wp-block-ridewrap-block-text-block-texture:not([data-type='ridewrap-block/text-block-texture']) {
+	background-color: $color-black;
+	color: $color-white;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	height: auto;
+	padding: 0 rem(60px);
+
+	.h4-style {
+		color: $color-white;
+		text-align: center;
+		padding: $gutter-width-double 0 $gutter-width-single 0;
+		margin-left: -$gutter-width-double;
+		margin-right: -$gutter-width-double;
+		margin-bottom: 0;
+
+		@media (min-width: $screen-lg) {
+			color: $color-white;
+			text-align: unset;
+			padding: unset;
+			background: unset;
+			margin-left: unset;
+			margin-right: unset;
+			margin-bottom: $gutter-width-double;
+		}
+
+		span {
+			display: inline-block;
+			position: relative;
+			padding: $gutter-width-single 0 $gutter-width-single 0;
+
+			@media (min-width: $screen-lg) {
+				padding: $gutter-width-single $gutter-width-double $gutter-width-single 0;
+			}
+		}
+
+		span::before {
+			content: "";
+			display: block;
+			background-color: $color-grey-dark;
+			position: absolute;
+			height: 100%;
+			width: 600%;
+			z-index: -1;
+			left: -480%;
+			top: 0;
+
+			@media (min-width: $screen-lg) {
+				left: -500%;
+			}
+		}
+	}
+
+	p {
+		color: $color-white;
+		line-height: rem(20px);
+		margin-bottom: 0;
+		padding: $gutter-width-single 0;
+		text-align: center;
+
+		@media (min-width: $screen-md) {
+			text-align: left;
+		}
+
+		@media (min-width: $screen-xl) {
+			padding: 0;
+		}
+	}
+
+	figure {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		img {
+			object-fit: cover;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	.col {
+		height: 100%;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 100%;
+		padding: $gutter-width-double 0;
+
+		@media (min-width: $screen-lg) {
+			max-width: 30%;
+			padding: rem(60px) 0;
+		}
+	}
+}
+
+// Editor styles.
+div[data-type='ridewrap-block/text-block-texture'] {
+	background-color: #2b2828;
+	padding: $gutter-width-single;
+
+	h4 {
+		color: $color-white;
+		font-style: italic;
+		margin: rem(5px) 0 rem(10px) 0;
+		text-transform: uppercase;
+	}
+
+	p {
+		color: $color-white;
+		font-size: rem(14px);
+	}
+}

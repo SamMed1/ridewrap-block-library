@@ -1,0 +1,107 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-ridewrap-block-panel-slider-small:not([data-type="ridewrap-block/panel-slider-small"]) {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0 0 5.625rem 0;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-panel-slider-small:not([data-type="ridewrap-block/panel-slider-small"]) {
+    padding: 3.75rem;
+  }
+}
+.wp-block-ridewrap-block-panel-slider-small:not([data-type="ridewrap-block/panel-slider-small"])::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #1f1f1f;
+  z-index: -1;
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-panel-slider-small:not([data-type="ridewrap-block/panel-slider-small"])::after {
+    width: 66%;
+  }
+}
+.wp-block-ridewrap-block-panel-slider-small:not([data-type="ridewrap-block/panel-slider-small"]) .col:first-of-type {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-panel-slider-small:not([data-type="ridewrap-block/panel-slider-small"]) .col:first-of-type {
+    width: 25%;
+  }
+}
+.wp-block-ridewrap-block-panel-slider-small:not([data-type="ridewrap-block/panel-slider-small"]) .col:last-of-type {
+  width: 100%;
+  margin: auto;
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-panel-slider-small:not([data-type="ridewrap-block/panel-slider-small"]) .col:last-of-type {
+    width: 75%;
+  }
+}
+.wp-block-ridewrap-block-panel-slider-small:not([data-type="ridewrap-block/panel-slider-small"]) .h2-style {
+  color: #ffffff;
+  text-align: center;
+  padding: calc(1.875rem * 2) 0 1.875rem 0;
+  background: #000000;
+  margin-left: -1.875rem;
+  margin-right: -1.875rem;
+  margin-bottom: 1.875rem;
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-panel-slider-small:not([data-type="ridewrap-block/panel-slider-small"]) .h2-style {
+    text-align: unset;
+    padding: unset;
+    background: unset;
+    margin-left: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+  }
+}
+.wp-block-ridewrap-block-panel-slider-small:not([data-type="ridewrap-block/panel-slider-small"]) .splide {
+  margin: auto;
+}
+.wp-block-ridewrap-block-panel-slider-small:not([data-type="ridewrap-block/panel-slider-small"]) .splide__pagination {
+  left: 0;
+  padding: 0 1em;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  margin-top: 0.9375rem;
+}
+.wp-block-ridewrap-block-panel-slider-small:not([data-type="ridewrap-block/panel-slider-small"]) .splide__pagination li {
+  display: inline-block;
+  line-height: 1;
+  list-style-type: none;
+  margin: 0;
+  pointer-events: auto;
+}
+
+div[data-type="ridewrap-block/panel-slider-small"] {
+  background-color: #2b2828;
+  padding: 0.9375rem;
+}
+div[data-type="ridewrap-block/panel-slider-small"] h3 {
+  color: #ffffff;
+  font-style: italic;
+  margin: 0.3125rem 0 0.625rem 0;
+}
+div[data-type="ridewrap-block/panel-slider-small"] > .container > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  display: flex;
+  gap: 0.9375rem;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

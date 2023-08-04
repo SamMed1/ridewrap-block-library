@@ -1,0 +1,79 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ @import '/../assets/css/settings';
+
+.wp-block-ridewrap-block-panel-wrapper-small:not([data-type='ridewrap-block/panel-wrapper-small']) {
+	background-color: $color-grey-medium;
+	color: $color-white;
+	padding: rem(60px) 0 rem(90px) 0;
+	position: relative;
+	z-index: 1;
+
+	@media (min-width: $screen-xl) {
+		padding: rem(60px);
+	}
+
+	& + .wp-block-ridewrap-block-panel-wrapper-small:not([data-type='ridewrap-block/panel-wrapper-small']) {
+		padding-top: 0;
+		margin-top: rem(-75px);
+
+		@media (min-width: $screen-xl) {
+			margin-top: -$gutter-width-double;
+		}
+	}
+
+	.h2-style {
+		color: $color-white;
+		text-align: center;
+		padding: calc($gutter-width-double * 2) 0 $gutter-width-double 0;
+		background: $color-black;
+		margin-left: -$gutter-width-double;
+		margin-right: -$gutter-width-double;
+		margin-bottom: $gutter-width-double;
+
+		@media (min-width: $screen-xl) {
+			text-align: unset;
+			padding: unset;
+			background: unset;
+			margin-left: unset;
+			margin-right: unset;
+			margin-bottom: unset;
+		}
+	}
+
+	.container-flex-wrap {
+		flex-direction: column;
+		gap: $gutter-width-single;
+
+		@media (min-width: $screen-lg) {
+			flex-direction: row;
+		}
+	}
+
+	.splide__slide {
+		flex: 1;
+	}
+}
+
+// Editor styles.
+div[data-type='ridewrap-block/panel-wrapper-small'] {
+	background-color: $color-grey-medium;
+	padding: $gutter-width-single;
+
+	h3 { 
+		display: none;
+		color: $color-white;
+		font-style: italic;
+		margin: rem(5px) 0 rem(10px) 0;
+	}
+
+	& > .container > .block-editor-inner-blocks > .block-editor-block-list__layout {
+		display: flex;
+		gap: $gutter-width-single;
+		flex-wrap: wrap;
+	}
+}

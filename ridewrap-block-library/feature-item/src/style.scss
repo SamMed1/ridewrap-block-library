@@ -1,0 +1,174 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ @import '/../assets/css/settings';
+
+.wp-block-ridewrap-block-feature-item:not([data-type='ridewrap-block/feature-item']) {
+	display: block;
+	position: relative;
+	text-align: center;
+	margin: auto;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	height: auto;
+    width: 100%;
+	padding-top: rem(25px);
+
+	@media (min-width: $screen-lg) {
+		transition: 0.5s ease-in-out;
+		transition-property: padding-top;
+		height: rem(230px);
+		width: rem(230px);
+	}
+
+	.h5-style {
+		color: $color-white;
+		margin-bottom: $gutter-width-single;
+		transition: 0.2s ease-in-out;
+		font-size: 22px;
+		line-height: rem(26px);
+		margin: 0 auto $gutter-width-single auto;
+		padding-top: $gutter-width-single;
+
+		@media (min-width: $screen-lg) {
+			padding-top: 0;
+			width: 90%;
+		}
+	}
+
+	figure {
+		margin: auto;
+		text-align: center;
+		border-radius: 50%;
+		border: 2px solid $color-white;
+		margin-bottom: $gutter-width-single;
+		width: 55%;
+
+		@media (min-width: $screen-lg) {
+			margin-bottom: $gutter-width-double;
+			width: rem(115px);
+			transition: 0.5s ease-in-out;
+		}
+	}
+
+	p {
+		display: block;
+		margin: auto;
+		width: 90%;
+
+		@media (min-width: $screen-lg) {
+			display: block;
+			opacity: 0;
+			width: rem(145px);
+			text-align: center;
+			transition: 0.1s ease-in-out;
+		}
+	}
+
+	&:hover {
+		@media (min-width: $screen-xl) {
+			padding-top: 0;
+		}
+
+		@media (min-width: $screen-xl) {
+			border: 2px solid $color-white;
+			transition: 0.5s ease-in-out;
+		}
+
+		figure {
+			@media (min-width: $screen-xl) {
+				border: 2px solid transparent;
+				transition: 0.5s ease-in-out;
+			}
+		}
+
+		p {
+			@media (min-width: $screen-xl) {
+				transition: 0.1s ease-in-out;
+				opacity: 1;
+			}
+		}
+
+		.h5-style {
+			@media (min-width: $screen-xl) {
+				font-size: 20px;
+				line-height: rem(22px);
+				transition: 0.5s ease-in-out;
+				width: 90%;
+				margin: rem(-35px) auto rem(10px) auto;
+			}
+		}
+	}
+}
+
+.wp-block-ridewrap-block-feature-slider:not([data-type='ridewrap-block/feature-slider']) {
+	.no-splide {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.splide__slide {
+			margin-bottom: $gutter-width-double;
+			width: 50%;
+
+			@media (min-width: $screen-lg) {
+				width: 25%;
+			}
+		}
+	}
+
+	// Splide list.
+	.splide__list {
+		@media (max-width: $screen-xl) {
+			display: flex!important;
+			width: 100%;
+			flex-wrap: wrap;
+		}
+
+		.splide__slide {
+			width: 50%;
+			@media (min-width: $screen-md) {
+				width: 25%;
+			}
+		}
+	}
+}
+
+// Editor styles.
+.editor-styles-wrapper {
+	div[data-type='ridewrap-block/feature-item'] {
+		background-color: #3a3a3a;
+		text-align: center;
+		margin-top: rem(10px);
+		vertical-align: top;
+		padding: 0 rem(10px);
+		flex: 1 0 23%;
+		max-width: 25%;
+
+		.h5-style {
+			color: $color-white;
+			margin: 0;
+			text-transform: uppercase;
+		}
+
+		figure {
+			margin: 0 auto;
+			padding: rem(10px) rem(10px);
+			text-align: center;
+			width: 55%;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		figcaption {
+			display: none;
+		}
+	}
+}

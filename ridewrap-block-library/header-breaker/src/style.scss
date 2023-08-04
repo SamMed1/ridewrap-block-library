@@ -1,0 +1,36 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@import '/../assets/css/settings';
+
+.wp-block-ridewrap-block-header-breaker:not([data-type='ridewrap-block/header-breaker']) {
+	background-color: $color-black;
+	padding: $gutter-width-double $gutter-width-single;
+	text-align: center;
+
+	@media (min-width: $screen-xl) {
+		padding: $gutter-width-double rem(60px);
+	}
+
+	.h2-style {
+		color: $color-white;
+		margin-bottom: 0;
+	}
+}
+
+// Editor styles.
+div[data-type='ridewrap-block/header-breaker'] {
+	background-color: $color-black;
+	padding: $gutter-width-single;
+	text-align: center;
+
+	h3 {
+		color: $color-white;
+		font-style: italic;
+		margin: 0;
+		text-transform: uppercase;
+	}
+}

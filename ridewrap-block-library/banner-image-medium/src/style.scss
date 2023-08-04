@@ -1,0 +1,245 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '/../assets/css/settings';
+
+.wp-block-ridewrap-block-banner-image-medium:not([data-type='ridewrap-block/banner-image-medium']) {
+	background: $color-black;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-transform: uppercase;
+	position: relative;
+	overflow: hidden;
+
+	@media (min-width: $screen-lg) {
+		height: rem(650px);
+	}
+
+	&:after {
+		content: "";
+		display: none;
+		width: 100%;
+		height: 95%;
+		background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgb(0, 0, 0));
+		bottom: 0;
+		position: absolute;
+
+		@media (min-width: $screen-lg) {
+			display: block;
+		}
+	}
+
+	.container {
+		height: 100%;
+	}
+
+	.h1-style {
+		margin-bottom: $gutter-width-double;
+	}
+
+	.h5-style {
+		font-size: 21px;
+		line-height: rem(26px);
+		font-style: none;
+		font-style: normal;
+		font-weight: 100;
+		margin-bottom: $gutter-width-double;
+		text-transform: none;
+	}
+
+	figure {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+
+		&:after {
+			content: "";
+			width: 100%;
+			height: 60%;
+			background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgb(0, 0, 0));
+			bottom: 0;
+			position: absolute;
+
+			@media (min-width: $screen-lg) {
+				display: none;
+			}
+		}
+
+		@media (min-width: $screen-lg) {
+			position: absolute;
+		}
+
+		img {
+			width: 100%;
+			transform: scale(1.8);
+
+			@media (min-width: $screen-lg) {
+				transform: none;
+			}
+		}
+	}
+
+	.block-internal {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: space-between;
+		padding: $gutter-width-double 0;
+		position: relative;
+		z-index: 1;
+
+		a {
+			display: none;
+			max-width: rem(300px);
+
+			@media (min-width: $screen-lg) {
+				display: block;
+			}
+		}
+
+		.btn {
+			animation: button-bounce 1s 1.15s;
+			cursor: pointer;
+			display: inline-block;
+			font-size: 22px;
+			padding: rem(8px) 45px 8px $gutter-width-double;
+			margin: auto;
+
+			@media (min-width: $screen-lg) {
+				margin: unset;
+			}
+
+			&::after {
+				top: 32%;
+			}
+		}
+
+		img {
+			height: 100%;
+		}
+	}
+
+	.block-page-name {
+		display: inline-block;
+		margin-bottom: rem(60px);
+		z-index: 1;
+		text-align: center;
+
+		@media (min-width: $screen-lg) {
+			text-align: left;
+		}
+	}
+}
+
+.block-super-checker {
+	max-height: 0;
+	transition: 0.75s ease-in-out;
+
+	&.block-super-checker-visible {
+		max-height: rem(2000px);
+	}
+}
+
+// Editor styles.
+.editor-styles-wrapper {
+	div[data-type='ridewrap-block/banner-image-medium'] {
+		background-color: $color-black;
+		margin-bottom: rem(65px);
+		background-color: #2b2828;
+		padding: rem(15px);
+
+		.custom-block-controls {
+			color: $color-white;
+			position: relative;
+			display: flex;
+			gap: rem(10px);
+			justify-content: space-between;
+			background: $color-black;
+			padding: rem(10px);
+			align-items: center;
+			margin-bottom: 0;
+
+			.components-base-control__help {
+				display: none;
+			}
+		}
+
+		.components-base-control {
+			padding: rem(10px);
+			background: $color-black;
+			color: $color-white;
+		}
+
+		.components-base-control__field {
+			margin: 0;
+		}
+
+		.components-input-control__container {
+			margin-top: rem(6px);
+			width: rem(85px);
+		}
+
+		a {
+			display: block;
+			font-weight: 500;
+			width: 100%;
+			background: $color-black;
+			color: $color-blue-dark;
+			font-size: 14px;
+			padding: rem(6px);
+			outline: none;
+			-webkit-backface-visibility: hidden;
+			border-top: 1px solid $color-outline-grey;
+		}
+
+		h3 {
+			color: $color-white;
+			font-style: italic;
+			margin: 0;
+			padding: rem(10px);
+		}
+
+		p {
+			color: $color-black;
+			padding: rem(10px);
+		}
+
+		h4:first-of-type {
+			background-color: $color-black;
+			color: $color-white;
+			font-size: 14px;
+			font-weight: 400;
+			margin: 0;
+			padding: $gutter-width-single rem(10px);
+		}
+
+		h4:last-of-type {
+			color: $color-white;
+			margin: 0;
+			padding: $gutter-width-single rem(10px);
+		}
+
+		figure {
+			margin: 0 0 0;
+			padding: rem(10px) rem(10px);
+			text-align: center;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		figcaption {
+			display: none;
+		}
+	}
+}

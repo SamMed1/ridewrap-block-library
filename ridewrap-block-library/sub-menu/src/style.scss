@@ -1,0 +1,114 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@import '/../assets/css/settings';
+
+.wp-block-ridewrap-block-sub-menu:not([data-type='ridewrap-block/sub-menu']) {
+	background-color: $color-black;
+	color: $color-black;
+	display: none;
+	position: relative;
+	padding: rem(10px) 0;
+
+	@media (min-width: $screen-lg) {
+		display: block;
+	}
+
+	.row {
+		p {
+			color: $color-black;
+			line-height: rem(20px);
+			margin-bottom: 0;
+		}
+	}
+
+	ul {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+
+		li {
+			background-color: $color-grey-medium;
+			flex: 1;
+			text-align: center;
+
+			a {
+				color: $color-white;
+				padding: rem(8px) $gutter-width-single;
+				display: block;
+				margin-bottom: 0;
+				position: relative;
+
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					right: 0;
+					width: 2px;
+					height: rem(20px);
+					top: rem(8px);
+					background-color: $color-white;
+				}
+			}
+
+			&:last-of-type {
+				a::after {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+// Editor styles.
+div[data-type='ridewrap-block/sub-menu'] {
+	background-color: $color-blue-medium;
+	padding: $gutter-width-single;
+
+	h3 {
+		color: $color-black;
+		font-style: italic;
+		margin: rem(5px) 0 rem(10px) 0;
+		text-transform: uppercase;
+	}
+
+	.row {
+		border-bottom: 1px solid $color-black;
+		padding: $gutter-width-single 0;
+
+		&:nth-child(1) {
+			padding-top: 0;
+		}
+	}
+
+	p {
+		color: $color-black;
+		font-size: rem(14px);
+		margin: 0;
+
+		&:first-of-type {
+			font-weight: 700;
+			font-style: italic;
+			font-size: 16px;
+			margin: 0 0 rem(10px) 0;
+			text-transform: uppercase;
+		}
+
+		&:last-of-type {
+			display: block;
+			font-weight: 500;
+			width: 100%;
+			background: $color-black;
+			color: #29a3ac;
+			font-size: 14px;
+			padding: rem(8px);
+			outline: none;
+			-webkit-backface-visibility: hidden;
+		}
+	}
+}

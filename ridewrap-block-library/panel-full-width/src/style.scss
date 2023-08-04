@@ -1,0 +1,287 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '/../assets/css/settings';
+
+.wp-block-ridewrap-block-panel-slider:not([data-type='ridewrap-block/panel-slider']) {
+	.no-splide {
+		.splide__slide.full-width {
+			max-width: 100%;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	.splide__slide.full-width {
+		@media (min-width: $screen-lg) {
+			padding: 5px;
+		}
+	}
+
+	.splide__list {
+		display: flex !important;
+		justify-content: center;
+		gap: $gutter-width-single;
+		flex-wrap: wrap;
+
+		@media (min-width: $screen-xl) {
+			justify-content: unset;
+			gap: unset;
+			flex-wrap: unset;
+		}
+	}
+}
+
+.wp-block-ridewrap-block-panel-full-width:not([data-type='ridewrap-block/panel-full-width']) {
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	transition: 0.25s ease-in-out;
+	max-width: 100%;
+
+	@media (min-width: $screen-xl) {
+		margin-bottom: $gutter-width-double;
+		width: 85%;
+	}
+
+	a {
+		display: block;
+		-webkit-backface-visibility: hidden;
+		text-decoration: none;
+
+		&:before {
+			content: '';
+			display: block;
+			height: calc(100% - 56px);
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			transition: 0.25s ease-in-out;
+
+			@media (min-width: $screen-lg) {
+				height: calc(100% - 62px);
+			}
+		}
+	}
+
+	.block-internal {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: $gutter-width-single $gutter-width-double $gutter-width-double $gutter-width-double;
+		width: 100%;
+
+		@media (min-width: $screen-lg) {
+			padding: $gutter-width-double;
+		}
+	}
+
+	.h3-style {
+		background: none;
+		color: $color-black;
+		display: inline-block;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		padding-top: $gutter-width-single;
+		position: relative;
+		width: 100%;
+		max-width: 100%;
+
+		@media (min-width: $screen-md) {
+			font-size: 25px;
+		}
+
+		@media (min-width: $screen-lg) {
+			font-size: 40px;
+			padding-top: 0;
+			text-align: left;
+		}
+
+		@media (min-width: $screen-xl) {
+			font-size: 30px;
+		}
+
+		@media (min-width: 1400px) {
+			font-size: 36px;
+		}
+
+		@media (min-width: 1600px) {
+			font-size: 40px;
+		}
+	}
+
+	p {
+		color: $color-black;
+		display: none;
+		font-style: italic;
+		width: 100%;
+		padding-top: $gutter-width-single;
+
+		@media (min-width: 1700px) {
+			display: block;
+			font-size: 16px;
+		}
+	}
+
+	.h4-style {
+		background-color: $color-black;
+		color: $color-white;
+		height: rem(56px);
+		padding: $gutter-width-single $gutter-width-double;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		-webkit-backface-visibility: hidden;
+		box-shadow: -0.25px 0px 0px 0px $color-black;
+
+		@media (min-width: $screen-lg) {
+			height: rem(62px);
+			padding-right: rem(45px);
+			text-align: right;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			right: $gutter-width-single;
+			background-image: url('assets/icon-caret-left.svg');
+			background-repeat: no-repeat;
+			background-repeat: no-repeat;
+			display: inline-block;
+			height: rem(20px);
+			width: rem(20px);
+			transform: rotate(180deg);
+			top: rem(20px);
+		}
+	}
+
+	figure {
+		margin: 0 0 0;
+		text-align: center;
+		height: auto;
+		overflow: hidden;
+		display: block;
+		align-items: flex-end;
+
+		img {
+			width: 135%;
+			max-width: 1000%;
+			height: 100%;
+
+			@media (min-width: $screen-lg) {
+				width: 100%;
+				max-width: 100%;
+				margin: 0;
+			}
+		}
+	}
+
+	&:hover {
+		@media (min-width: $screen-lg) {
+			transform: scale(1.02);
+		}
+
+		a:before {
+			background-color: rgba(255, 255, 255, 0.3);
+			transition: 0.25s ease-in-out;
+		}
+
+		.h4-style {
+			&:after {
+				animation: arrow-bounce 1s 1;
+			}
+		}
+	}
+}
+
+// Splide slide
+.splide__slide {
+	text-align: center;
+
+	@media (min-width: $screen-lg) {
+		text-align: unset;
+	}
+}
+
+// Editor styles.
+.editor-styles-wrapper {
+	div[data-type='ridewrap-block/panel-full-width'] {
+		background-color: $color-blue-medium;
+		display: inline-block;
+		width: 100%;
+		margin-right: $gutter-width-single;
+		margin-bottom: rem(65px);
+		margin-top: rem(10px);
+
+		.components-base-control {
+			padding: rem(10px);
+			background: $color-black;
+			color: $color-white;
+			border-bottom: 1px solid #2b2828;
+		}
+
+		.components-base-control__field {
+			margin: 0;
+		}
+
+		.components-input-control__container {
+			margin-top: rem(6px);
+			width: rem(85px);
+		}
+
+		a {
+			display: block;
+			font-weight: 500;
+			margin-top: rem(10px);
+			position: absolute;
+			width: 100%;
+			background: $color-black;
+			color: $color-blue-dark;
+			font-size: 14px;
+			padding: rem(6px);
+			outline: none;
+			-webkit-backface-visibility: hidden;
+			border: none;
+		}
+
+		h3 {
+			color: $color-black;
+			font-style: italic;
+			padding: rem(10px);
+		}
+
+		p {
+			color: $color-black;
+			padding: rem(10px);
+		}
+
+		h4 {
+			background-color: $color-black;
+			color: $color-white;
+			margin: 0;
+			padding: $gutter-width-single rem(10px);
+		}
+
+		figure {
+			margin: 0 0 0;
+			padding: rem(10px) rem(10px);
+			text-align: center;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		figcaption {
+			display: none;
+		}
+	}
+}

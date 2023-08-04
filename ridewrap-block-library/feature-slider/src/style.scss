@@ -1,0 +1,212 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ @import '/../assets/css/settings';
+
+.wp-block-ridewrap-block-feature-slider:not([data-type='ridewrap-block/feature-slider']) {
+	background-color: $color-black;
+	color: $color-white;
+	padding: 0 0 $gutter-width-double 0;
+	position: relative;
+	z-index: 1;
+
+	@media (min-width: $screen-xl) {
+		padding: rem(60px);
+	}
+
+	&::before {
+		content: '';
+		height: 100%;
+		width: rem(10px);
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: $color-orange-medium;
+		z-index: -1;
+	}
+
+	&::after {
+		content: '';
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: $color-grey-medium;
+		z-index: -1;
+
+		@media (min-width: $screen-xl) {
+			width: 66%;
+		}
+	}
+
+	.col:first-of-type {
+		display: flex;
+		flex-direction: column;
+		padding: $gutter-width-single $gutter-width-single;
+		background: $color-black;
+		margin-left: -$gutter-width-double;
+		margin-right: -$gutter-width-double;
+		margin-bottom: $gutter-width-double;
+		align-items: center;
+		justify-content: space-between;
+
+		@media (min-width: $screen-md) {
+			flex-direction: row;
+			gap: $gutter-width-double;
+		}
+
+		@media (min-width: $screen-xl) {
+			background: none;
+			align-items: baseline;
+			width: 40%;
+			flex-direction: column;
+			gap: 0;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.col:last-of-type {
+		width: 100%;
+		margin: auto;
+
+		@media (min-width: $screen-xl) {
+			width: 60%;
+		}
+	}
+
+	.h3-style {
+		color: $color-white;
+		text-align: center;
+		padding: rem(45px) 0 $gutter-width-single 0;
+		word-wrap: normal;
+
+		@media (min-width: $screen-xl) {
+			text-align: unset;
+			padding: unset;
+			background: unset;
+			margin-left: unset;
+			margin-right: unset;
+			margin-bottom: rem(50px);
+			max-width: 40%;
+		}
+	}
+
+	p {
+		color: $color-white;
+		line-height: rem(20px);
+		margin-bottom: 0;
+		padding: $gutter-width-single 0;
+		width: 75%;
+		text-align: center;
+
+		@media (min-width: $screen-md) {
+			text-align: left;
+		}
+
+		@media (min-width: $screen-xl) {
+			width: 50%;
+			padding: 0;
+		}
+	}
+
+	.border {
+		@media (min-width: $screen-xl) {
+			&::before {
+				content: "";
+				height: rem(10px);
+				width: 40%;
+				position: absolute;
+				left: 10px;
+				bottom: 0;
+				background-color: $color-grey-medium;
+			}
+
+			&::after {
+				content: "";
+				height: rem(10px);
+				width: 66%;
+				position: absolute;
+				right: 0px;
+				bottom: 0;
+				background-color: $color-black
+			}
+		}
+	}
+
+	// Splide wrapper.
+	.splide {
+		@media (min-width: $screen-lg) {
+			margin: auto;
+			width: 90%;
+		}
+		@media (min-width: $screen-xl) {
+			width: 100%;
+		}
+	}
+
+	// Splide pagination.
+	.splide__pagination {
+		left: 0;
+		padding: 0 1em;
+		position: absolute;
+		right: 0;
+		z-index: 1;
+
+		@media (min-width: $screen-xl) {
+			margin-top: calc($gutter-width-single * 1.5);
+		}
+
+		li {
+			display: inline-block;
+			line-height: 1;
+			list-style-type: none;
+			margin: 0;
+			pointer-events: auto;
+		}
+	}
+}
+
+// Editor styles.
+div[data-type='ridewrap-block/feature-slider'] {
+	background-color: #2b2828;
+	padding: $gutter-width-single;
+
+	h3 { 
+		color: $color-white;
+		font-style: italic;
+		margin: rem(5px) 0 rem(10px) 0;
+		text-transform: uppercase;
+	}
+
+	p {
+		color: $color-white;
+		font-size: rem(14px);
+	}
+
+	& > .container > .block-editor-inner-blocks > .block-editor-block-list__layout {
+		display: flex;
+		gap: $gutter-width-single;
+		flex-wrap: wrap;
+	}
+
+	.components-toggle-control {
+		display: flex;
+		position: absolute;
+		right: $gutter-width-single;
+		flex-direction: column;
+		color: $color-white;
+
+		.components-base-control__field {
+			margin: 0;
+		}
+
+		.components-base-control__help {
+			display: none;
+		}
+	}
+}

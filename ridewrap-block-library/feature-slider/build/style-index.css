@@ -1,0 +1,204 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0 0 1.875rem 0;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) {
+    padding: 3.75rem;
+  }
+}
+.wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"])::before {
+  content: "";
+  height: 100%;
+  width: 0.625rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ff4f31;
+  z-index: -1;
+}
+.wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"])::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #1f1f1f;
+  z-index: -1;
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"])::after {
+    width: 66%;
+  }
+}
+.wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .col:first-of-type {
+  display: flex;
+  flex-direction: column;
+  padding: 0.9375rem 0.9375rem;
+  background: #000000;
+  margin-left: -1.875rem;
+  margin-right: -1.875rem;
+  margin-bottom: 1.875rem;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .col:first-of-type {
+    flex-direction: row;
+    gap: 1.875rem;
+  }
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .col:first-of-type {
+    background: none;
+    align-items: baseline;
+    width: 40%;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+.wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .col:last-of-type {
+  width: 100%;
+  margin: auto;
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .col:last-of-type {
+    width: 60%;
+  }
+}
+.wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .h3-style {
+  color: #ffffff;
+  text-align: center;
+  padding: 2.8125rem 0 0.9375rem 0;
+  word-wrap: normal;
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .h3-style {
+    text-align: unset;
+    padding: unset;
+    background: unset;
+    margin-left: unset;
+    margin-right: unset;
+    margin-bottom: 3.125rem;
+    max-width: 40%;
+  }
+}
+.wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) p {
+  color: #ffffff;
+  line-height: 1.25rem;
+  margin-bottom: 0;
+  padding: 0.9375rem 0;
+  width: 75%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) p {
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) p {
+    width: 50%;
+    padding: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .border::before {
+    content: "";
+    height: 0.625rem;
+    width: 40%;
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    background-color: #1f1f1f;
+  }
+  .wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .border::after {
+    content: "";
+    height: 0.625rem;
+    width: 66%;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    background-color: #000000;
+  }
+}
+@media (min-width: 992px) {
+  .wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .splide {
+    margin: auto;
+    width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .splide {
+    width: 100%;
+  }
+}
+.wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .splide__pagination {
+  left: 0;
+  padding: 0 1em;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .splide__pagination {
+    margin-top: calc(0.9375rem * 1.5);
+  }
+}
+.wp-block-ridewrap-block-feature-slider:not([data-type="ridewrap-block/feature-slider"]) .splide__pagination li {
+  display: inline-block;
+  line-height: 1;
+  list-style-type: none;
+  margin: 0;
+  pointer-events: auto;
+}
+
+div[data-type="ridewrap-block/feature-slider"] {
+  background-color: #2b2828;
+  padding: 0.9375rem;
+}
+div[data-type="ridewrap-block/feature-slider"] h3 {
+  color: #ffffff;
+  font-style: italic;
+  margin: 0.3125rem 0 0.625rem 0;
+  text-transform: uppercase;
+}
+div[data-type="ridewrap-block/feature-slider"] p {
+  color: #ffffff;
+  font-size: 0.875rem;
+}
+div[data-type="ridewrap-block/feature-slider"] > .container > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  display: flex;
+  gap: 0.9375rem;
+  flex-wrap: wrap;
+}
+div[data-type="ridewrap-block/feature-slider"] .components-toggle-control {
+  display: flex;
+  position: absolute;
+  right: 0.9375rem;
+  flex-direction: column;
+  color: #ffffff;
+}
+div[data-type="ridewrap-block/feature-slider"] .components-toggle-control .components-base-control__field {
+  margin: 0;
+}
+div[data-type="ridewrap-block/feature-slider"] .components-toggle-control .components-base-control__help {
+  display: none;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

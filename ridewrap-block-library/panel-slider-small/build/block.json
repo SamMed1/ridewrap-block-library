@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ridewrap-block/panel-slider-small",
+	"version": "0.1.0",
+	"title": "Panel Slider Small",
+	"category": "ridewrap-blocks",
+	"icon": "slides",
+	"description": "RideWrap Panel Slider Small Block.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "panel-slider-small",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

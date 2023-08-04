@@ -1,0 +1,355 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@import '/../assets/css/settings';
+
+.wp-block-ridewrap-block-latest-posts:not([data-type='ridewrap-block/latest-posts']) {
+	background-color: $color-blue-dark;
+	color: $color-white;
+	padding: 0;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+
+	@media (min-width: $screen-lg) {
+		padding: rem(60px);
+		height: rem(650px);
+	}
+
+	&::after {
+		content: '';
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: $color-blue-dark;
+		z-index: -2;
+
+		@media (min-width: $screen-lg) {
+			width: 33%;
+		}
+	}
+
+	.container {
+		padding: 0;
+		flex-direction: column-reverse;
+
+		@media (min-width: $screen-lg) {
+			padding: unset;
+			flex-direction: row;
+		}
+	}
+
+	.col:first-of-type {
+		width: 100%;
+		margin: auto;
+
+		@media (min-width: $screen-lg) {
+			width: 60%;
+		}
+	}
+
+	.col:last-of-type {
+		width: 100%;
+
+		@media (min-width: $screen-lg) {
+			width: 40%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	}
+
+	.col-internal {
+		text-align: center;
+		width: 60%;
+
+		@media (min-width: $screen-lg) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.h2-style {
+		color: $color-black;
+		text-align: center;
+		padding: $gutter-width-double 0 $gutter-width-single 0;
+		background: $color-blue-dark;
+		margin-left: -$gutter-width-double;
+		margin-right: -$gutter-width-double;
+		margin-bottom: 0;
+
+		@media (min-width: $screen-lg) {
+			color: $color-white;
+			text-align: right;
+			padding: unset;
+			background: unset;
+			margin-left: unset;
+			margin-right: unset;
+			margin-bottom: unset;
+			max-width: 325px;
+		}
+
+		span {
+			display: inline-block;
+			position: relative;
+			padding: $gutter-width-single 0 $gutter-width-single 0;
+
+			@media (min-width: $screen-lg) {
+				padding: $gutter-width-single 0 $gutter-width-single $gutter-width-double;
+			}
+		}
+
+		span::before {
+			content: "";
+			display: block;
+			background-color: $color-grey-dark;
+			position: absolute;
+			height: 100%;
+			width: 200%;
+			z-index: -1;
+			right: -100%;
+			top: 0;
+		}
+	}
+
+	// Splide slides.
+	.splide {
+		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+		height: rem(600px);
+
+		@media (min-width: $screen-lg) {
+			position: absolute;
+			width: 67%;
+			height: rem(650px);
+		}
+	}
+
+	.splide__track {
+		overflow: hidden;
+	}
+
+	.splide__slide {
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		box-sizing: border-box;
+		-ms-flex-negative: 0;
+		flex-shrink: 0;
+		list-style-type: none !important;
+		margin: 0;
+		position: relative;
+		display: flex;
+		align-items: center;
+		align-content: center;
+		flex-direction: column;
+		overflow: hidden;
+		background-position: center center;
+		background-size: cover;
+		height: rem(600px);
+
+		@media (min-width: $screen-lg) {
+			background-position: center center;
+			background-size: cover;
+			height: rem(650px);
+		}
+	}
+
+	// Splide pagination.
+	.splide__pagination {
+		display: flex;
+		left: 0;
+		padding: 0 1em;
+		position: absolute;
+		right: 0;
+		z-index: 1;
+		top: rem(-26px);
+
+		@media (min-width: $screen-lg) {
+			display: none;
+		}
+
+		li {
+			display: inline-block;
+			line-height: 1;
+			list-style-type: none;
+			margin: 0;
+			pointer-events: auto;
+		}
+	}
+
+	// Splide desktop thumbnails.
+	.splide-desktop-thumbnails-wrapper {
+		display: none;
+
+		@media (min-width: $screen-lg) {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			padding: 0;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			margin-top: rem(55px);
+			margin-bottom: rem(45px);
+			max-width: rem(265px);
+			text-align: left;
+		}
+
+		.splide-desktop-thumbnail-sec {
+			color: $color-white;
+			display: flex;
+			overflow: hidden;
+			list-style: none;
+			margin: 0;
+			cursor: pointer;
+			transition: 0.25s ease-in-out;
+			margin-bottom: 25px;
+			text-transform: uppercase;
+			width: 100%;
+
+			&:hover {
+				transition: 0.25s ease-in-out;
+				color: $color-black;
+			}
+
+			&.is-active {
+				color: $color-black;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	// Splide quote.
+	.splide-quote {
+		position: absolute;
+		background: $color-black;
+		color: $color-white;
+		width: rem(700px);
+		left: 0;
+		bottom: 0px;
+		padding: rem(60px) rem(40px);
+		line-height: 122%;
+		position: absolute;
+		width: 100%;
+		font-style: italic;
+
+		@media (min-width: $screen-lg) {
+			position: absolute;
+			width: rem(700px);
+			padding: rem(60px) rem(60px);
+			bottom: rem(60px);
+		}
+
+		.btn {
+			display: block;
+			background-color: $color-grey-medium;
+			margin: unset;
+			margin-left: 0;
+			margin-top: $gutter-width-double;
+			font-size: 16px;
+			width: rem(145px);
+
+			@media (min-width: $screen-lg) {
+				margin-left: rem(45px);
+			}	
+
+			&:after {
+				top: rem(14px);
+				height: rem(12px);
+				width: rem(12px);
+			}
+		}
+
+		.h5-style {
+			color: $color-white;
+			margin-bottom: $gutter-width-double;
+		}
+	
+		p {
+			color: $color-white;
+			line-height: 122%;
+			padding-left: 0;
+
+			@media (min-width: $screen-lg) {
+				padding-left: rem(45px);
+			}
+		}
+	}
+
+	.btn {
+		display: none;
+		font-size: 20px;
+		transform: none;
+		background: $color-black;
+		text-transform: uppercase;
+		font-style: italic;
+		position: relative;
+		width: rem(220px);
+		text-align: left;
+		padding: rem(6px) $gutter-width-single;
+
+		@media (min-width: $screen-lg) {
+			display: block;
+		}
+
+		&::after {
+			background-image: url('images/icon-caret-left.svg');
+			background-repeat: no-repeat;
+			content: "";
+			display: inline-block;
+			height: rem(14px);
+			position: absolute;
+			right: rem(14px);
+			top: rem(16px);
+			transform: rotate(180deg);
+			width: rem(14px);
+			opacity: 1;
+			transition: 0.2s ease-in-out;
+		}
+
+		&:hover {
+			opacity: 1;
+			color: $color-grey-light;
+
+			&::after {
+				opacity: 0.5;
+				transition: 0.2s ease-in-out;
+			}
+		}
+	}
+}
+
+// Editor styles.
+div[data-type='ridewrap-block/latest-posts'] {
+	background-color: $color-blue-medium;
+	padding: $gutter-width-single;
+
+	h2 {
+		color: $color-black;
+		font-style: italic;
+		margin: rem(5px) 0 rem(10px) 0;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.link-style {
+		color: $color-blue-dark;
+		background: $color-black;
+		padding: rem(10px);
+		font-size: 14px;
+	}
+}

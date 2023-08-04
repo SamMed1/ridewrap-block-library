@@ -1,0 +1,125 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) {
+  background-color: #000000;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: auto;
+  padding: 0 3.75rem;
+}
+.wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) .h4-style {
+  color: #ffffff;
+  text-align: center;
+  padding: 1.875rem 0 0.9375rem 0;
+  margin-left: -1.875rem;
+  margin-right: -1.875rem;
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) .h4-style {
+    color: #ffffff;
+    text-align: unset;
+    padding: unset;
+    background: unset;
+    margin-left: unset;
+    margin-right: unset;
+    margin-bottom: 1.875rem;
+  }
+}
+.wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) .h4-style span {
+  display: inline-block;
+  position: relative;
+  padding: 0.9375rem 0 0.9375rem 0;
+}
+@media (min-width: 992px) {
+  .wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) .h4-style span {
+    padding: 0.9375rem 1.875rem 0.9375rem 0;
+  }
+}
+.wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) .h4-style span::before {
+  content: "";
+  display: block;
+  background-color: #000000;
+  position: absolute;
+  height: 100%;
+  width: 600%;
+  z-index: -1;
+  left: -480%;
+  top: 0;
+}
+@media (min-width: 992px) {
+  .wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) .h4-style span::before {
+    left: -500%;
+  }
+}
+.wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) p {
+  color: #ffffff;
+  line-height: 1.25rem;
+  margin-bottom: 0;
+  padding: 0.9375rem 0;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) p {
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) p {
+    padding: 0;
+  }
+}
+.wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) figure {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) .col {
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  padding: 1.875rem 0;
+}
+@media (min-width: 992px) {
+  .wp-block-ridewrap-block-text-block-texture:not([data-type="ridewrap-block/text-block-texture"]) .col {
+    max-width: 30%;
+    padding: 3.75rem 0;
+  }
+}
+
+div[data-type="ridewrap-block/text-block-texture"] {
+  background-color: #2b2828;
+  padding: 0.9375rem;
+}
+div[data-type="ridewrap-block/text-block-texture"] h4 {
+  color: #ffffff;
+  font-style: italic;
+  margin: 0.3125rem 0 0.625rem 0;
+  text-transform: uppercase;
+}
+div[data-type="ridewrap-block/text-block-texture"] p {
+  color: #ffffff;
+  font-size: 0.875rem;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

@@ -1,0 +1,419 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@import '/../assets/css/settings';
+
+.wp-block-ridewrap-block-panel-slider:not([data-type='ridewrap-block/panel-slider']) {
+	background-color: $color-black;
+	color: $color-white;
+	padding: 0 0 rem(60px) 0;
+	position: relative;
+	z-index: 1;
+
+	@media (min-width: $screen-xl) {
+		padding: rem(60px);
+	}
+
+	.container {
+		height: auto;
+	}
+
+	&::before {
+		content: '';
+		height: 100%;
+		width: rem(10px);
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: $color-orange-medium;
+		z-index: -1;
+	}
+
+	&::after {
+		content: '';
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: $color-grey-medium;
+		z-index: -1;
+
+		@media (min-width: $screen-xl) {
+			width: 66%;
+		}
+	}
+
+	&.double-padding {
+		@media (min-width: $screen-xl) {
+			padding-top: rem(60px);
+			padding-bottom: rem(165px);
+		}
+	}
+
+	// Block background color variations.
+	&.block-background-grey-medium {
+		background-color: $color-grey-medium;
+		border-bottom: 10px solid $color-black;
+
+		&::before,
+		&::after,
+		.border {
+			display: none;
+		}
+	}
+
+	&.block-background-blue-medium {
+		background-color: $color-blue-medium;
+		border-bottom: 10px solid $color-black;
+
+		&::before,
+		&::after,
+		.border {
+			display: none;
+		}
+
+		.h3-style,
+		p {
+			color: $color-black;
+		}
+
+		.col:first-of-type {
+
+			.h3-style,
+			p {
+				color: $color-white;
+
+				@media (min-width: $screen-xl) {
+					color: $color-black;
+				}
+			}
+		}
+	}
+
+	&.block-blue-highlight {
+		&::after {
+			background-color: $color-blue-dark;
+		}
+	}
+
+	&.block-grey-highlight {
+		&::after {
+			background-color: #666666;
+		}
+	}
+
+	&.block-red-highlight {
+		&::after {
+			background-color: $color-maroon;
+		}
+	}
+
+	// Styling for when two blocks containing panel items of the same category are ayered on top of eachother, to give the appearance of a 2 x 3 panel grid.
+	// e.g - /find-your-bike/mtb page, covered protection section.
+	&.block-background-grey-medium + &.block-background-grey-medium,
+	&.block-background-blue-medium + &.block-background-blue-medium,
+	&.block-grey-highlight + &.block-grey-highlight,
+	&.block-blue-highlight + &.block-blue-highlight,
+	&.block-red-highlight + &.block-red-highlight {
+		.col:first-of-type {
+			display: none!important;
+
+			@media (min-width: $screen-xl) {
+				display: block!important;
+			}
+		}
+
+		margin-top: -30px;
+
+		@media (min-width: $screen-xl) {
+			margin-top: rem(-75px);
+			padding-top: rem(45px);
+		}
+	}
+
+	// Block background image variations.
+	&.block-graphic-shuttle {
+		background-image: url('../assets/shuttle-armour-graphic.webp');
+		background-size: 35%;
+		background-repeat: no-repeat;
+		background-position: -1px 101%;
+	
+		@media (min-width: $screen-xl) {
+			background-size: 40%;
+		}
+		@media (min-width: 1500px) {
+			background-size: 50%;
+		}
+		@media (min-width: $screen-wide) {
+			background-size: 52%;
+		}
+
+		.col:last-of-type {
+			justify-content: center;
+
+			@media (min-width: $screen-md) {
+				justify-content: right;
+			}
+		}
+	}
+
+	// Block background image variations.
+	&.block-graphic-shuttle-blue {
+		&::after {
+			@media (min-width: $screen-xl) {
+				background-image: url('../assets/bwp-blue.webp');
+				background-size: 78%;
+				background-repeat: no-repeat;
+				background-position: 100% 100%;
+			}
+			@media (min-width: $screen-wide) {
+				background-position: 100% 100%;
+			}
+		}
+	}
+
+	&.no-border {
+		.border {
+			display: none;
+		}
+
+		&::before {
+			display: none;
+		}
+	}
+
+	.col:first-of-type {
+		display: flex;
+		flex-direction: column;
+		padding: $gutter-width-single $gutter-width-single;
+		background: $color-black;
+		margin-left: -$gutter-width-double;
+		margin-right: -$gutter-width-double;
+		margin-bottom: $gutter-width-double;
+		align-items: center;
+		justify-content: space-between;
+
+		@media (min-width: $screen-md) {
+			flex-direction: row;
+			gap: $gutter-width-double;
+		}
+
+		@media (min-width: $screen-xl) {
+			background: none;
+			align-items: baseline;
+			width: 25%;
+			flex-direction: column;
+			gap: 0;
+			margin: 0;
+			padding: 0;
+			justify-content: flex-start;
+		}
+	}
+
+	.col:last-of-type {
+		width: 100%;
+		margin: auto;
+
+		@media (min-width: $screen-xl) {
+			width: 75%;
+		}
+	}
+
+	.h1-style,
+	.h2-style,
+	.h3-style,
+	.h4-style,
+	.h5-style {
+		color: $color-white;
+		text-align: center;
+		padding: rem(45px) 0 $gutter-width-single 0;
+		word-wrap: normal;
+
+		@media (min-width: $screen-md) {
+			padding: unset;
+		}
+
+		@media (min-width: $screen-xl) {
+			text-align: unset;
+			background: unset;
+			margin-left: unset;
+			margin-right: unset;
+			margin-bottom: rem(50px);
+			max-width: 100%;
+		}
+	}
+
+	p {
+		color: $color-white;
+		line-height: rem(20px);
+		margin-bottom: 0;
+		padding: $gutter-width-single 0;
+		width: 75%;
+		text-align: center;
+
+		@media (min-width: $screen-md) {
+			text-align: left;
+		}
+
+		@media (min-width: $screen-xl) {
+			padding: 0;
+		}
+
+		@media (min-width: $screen-wide) {
+			width: 80%;
+		}
+	}
+
+	.no-paragraph {
+		width: 100%;
+		display: block!important;
+		background: none!important;
+		padding: 0!important;
+
+		p {
+			display: none;
+		}
+
+		.h1-style,
+		.h2-style,
+		.h3-style,
+		.h4-style,
+		.h5-style {
+			color: $color-white;
+			text-align: center;
+			padding: rem(60px) 0 rem(30px) 0;
+			background: $color-black;
+			margin-left: 0;
+			margin-right: rem(-60px);
+			margin-bottom: $gutter-width-double;
+
+			@media (min-width: $screen-xl) {
+				padding: 0;
+				text-align: unset;
+				padding: unset;
+				background: unset;
+				margin-left: unset;
+				margin-right: unset;
+				margin-bottom: unset;
+			}
+		}
+	}
+
+	.border {
+		@media (min-width: $screen-xl) {
+			&::before {
+				content: "";
+				height: rem(10px);
+				width: 40%;
+				position: absolute;
+				left: 10px;
+				bottom: 0;
+				background-color: $color-grey-medium;
+			}
+
+			&::after {
+				content: "";
+				height: rem(10px);
+				width: 66%;
+				position: absolute;
+				right: 0px;
+				bottom: 0;
+				background-color: $color-black
+			}
+		}
+	}
+
+	// Splide pagination.
+	.splide {
+		margin: auto;
+	}
+
+	.splide__pagination {
+		left: 0;
+		padding: 0 1em;
+		position: absolute;
+		right: 0;
+		z-index: 1;
+		margin-top: $gutter-width-single;
+
+		li {
+			display: inline-block;
+			line-height: 1;
+			list-style-type: none;
+			margin: 0;
+			pointer-events: auto;
+		}
+	}
+}
+
+// Editor styles.
+div[data-type='ridewrap-block/panel-slider'] {
+	background-color: #2b2828;
+	padding: $gutter-width-single;
+
+	h3 {
+		color: $color-white;
+		font-style: italic;
+		margin: rem(5px) 0 rem(10px) 0;
+		text-transform: uppercase;
+	}
+
+	p {
+		color: $color-white;
+		font-size: rem(14px);
+	}
+
+	& > .container > .block-editor-inner-blocks > .block-editor-block-list__layout {
+		display: flex;
+		gap: $gutter-width-single;
+		flex-wrap: wrap;
+	}
+
+	.custom-block-controls {
+		color: $color-white;
+		position: relative;
+		display: flex;
+		gap: rem(10px);
+		justify-content: space-between;
+		background: $color-black;
+		padding: rem(10px);
+		align-items: center;
+		margin-bottom: rem(20px);
+
+		.components-base-control {
+			flex: 1;
+		}
+
+		.components-toggle-control {
+			.components-base-control__field {
+				margin: 0;
+			}
+
+			.components-base-control__help {
+				display: none;
+			}
+		}
+
+		.components-input-control__container {
+			margin-top: rem(6px);
+		}
+	}
+
+	.heading-select {
+		max-width: 40%;
+		background: $color-black;
+		padding: rem(20px) rem(10px);
+
+		label {
+			color: $color-white!important;
+		}
+
+		.components-input-control__container {
+			width: 90%;
+		}
+	}
+}

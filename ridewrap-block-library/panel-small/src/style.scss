@@ -1,0 +1,186 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ @import '/../assets/css/settings';
+
+ .wp-block-ridewrap-block-panel-slider-small:not([data-type='ridewrap-block/panel-slider-small']) {
+	.splide__slide {
+		@media (min-width: $screen-lg) {
+            padding: 5px;
+        }
+	}
+
+	.splide__list {
+		@media (min-width: $screen-lg) {
+			display: flex!important;
+			justify-content: center;
+			gap: $gutter-width-single;
+			flex-wrap: wrap;
+		}
+
+		@media (min-width: $screen-xl) {
+			justify-content: unset;
+			gap: unset;
+			flex-wrap: unset;
+		}
+	}
+}
+
+.wp-block-ridewrap-block-panel-small:not([data-type='ridewrap-block/panel-small']) {
+    display: inline-block;
+	margin-bottom: $gutter-width-single;
+	width: 100%;
+	position: relative;
+	transition: 0.25s ease-in-out;
+
+	@media (min-width: $screen-lg) {
+		margin-bottom: 0;
+		max-width: rem(295px);
+	}
+
+	@media (min-width: $screen-xl) {
+		max-width: 100%;
+	}
+
+	a {
+		background-color: $color-black;
+		display: block;
+		-webkit-backface-visibility: hidden;
+		text-decoration: none;
+
+		&:before {
+			@media (min-width: $screen-lg) {
+				content: '';
+				display: block;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				transition: 0.25s ease-in-out;
+				height: 100%;
+			}
+		}
+	}
+
+	.h4-style {
+		background-color: $color-black;
+		color: $color-white;
+		padding: $gutter-width-single rem(45px) $gutter-width-single $gutter-width-double;
+		position: relative;
+		bottom: 0;
+		width: 100%;
+		line-height: rem(30px);
+		font-size: 25px;
+		-webkit-backface-visibility: hidden;
+		box-shadow: -0.25px 0px 0px 0px $color-black;
+		z-index: 1;
+		margin-bottom: 0;
+
+		@media (min-width: $screen-lg) {
+			position: absolute;
+		}
+
+		@media (min-width: $screen-wide) {
+			font-size: 32px;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			right: $gutter-width-single;
+			background-image: url('assets/icon-caret-left.svg');
+			background-repeat: no-repeat;
+			background-repeat: no-repeat;
+			display: inline-block;
+			height: rem(20px);
+			width: rem(20px);
+			transform: rotate(180deg);
+			top: 35%;
+		}
+	}
+
+	figure {
+		display: none;
+		margin: 0 0 0;
+		text-align: center;
+
+		@media (min-width: $screen-lg) {
+			display: contents;
+            height: rem(62px);
+        }
+	}
+
+	&:hover {
+		@media (min-width: $screen-lg) {
+            transform: scale(1.02);
+        }
+
+		a:before {
+			background-color: rgba(255,255,255,0.3);
+			transition: 0.25s ease-in-out;
+		}
+
+		.h4-style {
+			&:after {
+				animation: arrow-bounce 1s 1;
+			}
+		}
+	}
+}
+
+// Editor styles.
+.editor-styles-wrapper {
+	div[data-type='ridewrap-block/panel-small'] {
+		background-color: $color-blue-medium;
+		flex: 1 0 30%;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: rem(65px);
+		margin-top: rem(10px);
+		max-width: 32%;
+
+		a {
+			display: block;
+			font-weight: 500;
+			margin-top: rem(10px);
+			position: absolute;
+			width: 100%;
+			background: $color-black;
+			color: $color-blue-dark;
+			font-size: 14px;
+			padding: rem(6px);
+		}
+
+		h2 { 
+			color: $color-white;
+			font-style: italic;
+		}
+
+		.h4-style {
+			background-color: $color-black;
+			color: $color-white;
+			margin: 0;
+			padding: $gutter-width-single rem(10px);
+		}
+
+		figure {
+			margin: 0 0 0;
+			padding: rem(10px) rem(10px);
+			text-align: center;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		figcaption {
+			display: none;
+		}
+	}
+}

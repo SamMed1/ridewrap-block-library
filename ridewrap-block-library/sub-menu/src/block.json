@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ridewrap-block/sub-menu",
+	"version": "0.1.0",
+	"title": "Sub Menu",
+	"category": "ridewrap-blocks",
+	"icon": "smiley",
+	"description": "Ridewrap Sub-Menu Block.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "sub-menu",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
